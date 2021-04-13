@@ -1,0 +1,25 @@
+div.Letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  &.disabled {
+    cursor: default;
+    color: #555;
+    border-color: #555;
+    background-color: #ddd;
+  }
+  &:not(.disabled) {
+    cursor: pointer;
+    &:hover {
+      background-color: #ccc;
+    }
+    &:active {
+      background-color: #aaa;
+    }
+  }
+}
