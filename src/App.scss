@@ -4,12 +4,19 @@ div.App {
   align-items: center;
   width: Min(90vw, 1000px);
   margin: auto;
+  h1 {
+    text-align: center;
+  }
   div.info {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     font-size: 1.3rem;
     margin: 21px 0;
+    & > * {
+      margin: 8px;
+    }
   }
   div.controls {
     display: flex;

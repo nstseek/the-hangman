@@ -1,13 +1,48 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import History from './History';
 import GameContext from '../../contexts/gameContext';
 
 describe('<History />', () => {
-  let component;
+  let component: ReturnType<typeof mount>;
+  let providerData = {
+    errors: 0,
+    setErrors: () => null,
+    selectedLetters: [],
+    setSelectedLetters: () => null,
+    timeIsOut: () => null,
+    setWord: () => null,
+    word: '',
+    won: false,
+    setWon: () => null
+  };
+  const setHistory = jest.fn();
+
+  const mountComponent = () => {
+    component = mount(
+      <GameContext.Provider value={providerData}>
+        <History setHistory={setHistory} />
+      </GameContext.Provider>
+    );
+  };
 
   beforeEach(() => {
-    component = shallow(
+    providerData = {
+      errors: 0,
+      setErrors: () => null,
+      selectedLetters: [],
+      setSelectedLetters: () => null,
+      timeIsOut: () => null,
+      setWord: () => null,
+      word: '',
+      won: false,
+      setWon: () => null
+    };
+    mountComponent();
+  });
+
+  beforeEach(() => {
+    component = mount(
       <GameContext.Provider
         value={{
           errors: 0,
