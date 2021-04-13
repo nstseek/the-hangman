@@ -4,7 +4,9 @@ import './Time.scss';
 
 const Time: React.FC = () => {
   const [time, setTime] = useState(100);
-  const { word, selectedLetters, setErrors, errors } = useContext(GameContext);
+  const { word, selectedLetters, setErrors, errors, won } = useContext(
+    GameContext
+  );
   const setTimeoutRef = useRef(null);
 
   useEffect(() => {
@@ -13,7 +15,9 @@ const Time: React.FC = () => {
     } else {
       setTime(100);
     }
-    setTimeoutRef.current = setTimeout(updateTime, 1000);
+    if (!won) {
+      setTimeoutRef.current = setTimeout(updateTime, 1000);
+    }
     return () => {
       clearTimeout(setTimeoutRef.current);
     };

@@ -1,1 +1,32 @@
-.History {}
+div.History {
+  display: flex;
+  margin: 34px 0;
+  table {
+    tr {
+      th {
+        padding: 13px 8px;
+      }
+    }
+    thead tr {
+      background-color: #bbb;
+    }
+    tbody tr {
+      td {
+        padding: 8px 5px;
+        text-align: center;
+        &.restart {
+          cursor: pointer;
+          &:hover {
+            background-color: #eee;
+          }
+          &:active {
+            background-color: #ccc;
+          }
+        }
+      }
+      &:nth-child(2n) {
+        background-color: #ddd;
+      }
+    }
+  }
+}

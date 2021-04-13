@@ -7,8 +7,11 @@ interface GameCtx {
   setErrors: ReactUseState<number>;
   errors: number;
   word: string;
+  setWord: ReactUseState<string>;
   selectedLetters: string[];
   setSelectedLetters: ReactUseState<string[]>;
+  won: boolean;
+  setWon: ReactUseState<boolean>;
 }
 
 const GameContext = React.createContext<GameCtx>(null);

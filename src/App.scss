@@ -10,26 +10,10 @@ div.App {
     width: 100%;
     font-size: 1.3rem;
     margin: 21px 0;
-    & > div {
-      display: flex;
-      justify-content: center;
-      width: 180px;
-      cursor: default;
-      i {
-        margin: 0 8px;
-      }
-      border: 2px solid black;
-      border-radius: 8px;
-      padding: 8px 13px;
-    }
-    div.restart, div.history {
-      cursor: pointer;
-      &:hover {
-        background-color: #ccc;
-      }
-      &:active {
-        background-color: #aaa;
-      }
-    }
+  }
+  div.controls {
+    display: flex;
+    width: Min(90%, 600px);
+    justify-content: space-evenly;
   }
 }

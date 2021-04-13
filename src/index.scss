@@ -10,6 +10,27 @@ body {
 * {
   box-sizing: border-box;
 }
+.button {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 180px;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 8px 13px;
+  cursor: pointer;
+  i {
+    margin: 0 8px;
+  }
+  &:hover {
+    background-color: #ccc;
+  }
+  &:active {
+    background-color: #aaa;
+  }
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

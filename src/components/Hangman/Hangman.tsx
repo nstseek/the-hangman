@@ -29,7 +29,9 @@ const Hangman: React.FC = () => {
       case 6:
         return hangman7;
       default:
-        throw new Error('Error is greater than parts of body!');
+        throw new Error(
+          'Error is greater than parts of body or less than zero!'
+        );
     }
   };
 
