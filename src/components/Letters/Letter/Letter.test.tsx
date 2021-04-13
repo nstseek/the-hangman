@@ -6,7 +6,9 @@ describe('<Letter />', () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<Letter />);
+    component = shallow(
+      <Letter letter='A' disabled={false} onClick={() => null} />
+    );
   });
 
   test('It should mount', () => {
