@@ -1,0 +1,16 @@
+div.Wordbox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 34px 0;
+  div.wordbox-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-bottom: 2px solid black;
+    width: 36px;
+    height: 36px;
+  }
+}
