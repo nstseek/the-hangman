@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import GameContext from '../../contexts/gameContext';
 import './Time.scss';
 
+/**
+ * This component handles the timer in our game
+ */
 const Time: React.FC = () => {
   const [time, setTime] = useState(100);
   const { word, selectedLetters, setErrors, errors, won } = useContext(

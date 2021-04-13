@@ -9,6 +9,9 @@ import hangman6 from '../../assets/hangman_6.png';
 import hangman7 from '../../assets/hangman_7.png';
 import './Hangman.scss';
 
+/**
+ * This component handles the state from the Hangman, showing him according to the number of errors
+ */
 const Hangman: React.FC = () => {
   const { errors } = useContext(GameContext);
 

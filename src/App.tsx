@@ -9,6 +9,9 @@ import GameContext from './contexts/gameContext';
 import SavedGames from './types/savedGames';
 import { getRandomWord } from './words';
 
+/**
+ * This is the root component for our application
+ */
 function App() {
   const [errors, setErrors] = useState(0);
   const [word, setWord] = useState(getRandomWord());

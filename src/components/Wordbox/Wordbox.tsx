@@ -2,6 +2,9 @@ import React, { useContext, useEffect } from 'react';
 import GameContext from '../../contexts/gameContext';
 import './Wordbox.scss';
 
+/**
+ * This component renders the spaces to each letter in our secret word, filling them when the user selects the right letter
+ */
 const Wordbox: React.FC = () => {
   const { word, selectedLetters, errors, setWon } = useContext(GameContext);
 

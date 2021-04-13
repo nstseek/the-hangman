@@ -13,6 +13,9 @@ const getAlphabet = (): string[] => {
 
 const alphabet = getAlphabet();
 
+/**
+ * This component renders all alphabet letters, managing state changes when you click a letter
+ */
 const Letters: React.FC = () => {
   const {
     selectedLetters,

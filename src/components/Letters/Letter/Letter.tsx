@@ -7,6 +7,9 @@ interface Props {
   onClick(letter: string);
 }
 
+/**
+ * This component render each letter, adding styles and event handlers to each letter
+ */
 const Letter: React.FC<Props> = ({ letter, disabled, onClick }) => {
   return (
     <div

@@ -8,6 +8,9 @@ interface Props {
   setHistory(bool: boolean);
 }
 
+/**
+ * This component shows your saved games, allowing you to play them again or to delete your history
+ */
 const History: React.FC<Props> = ({ setHistory }) => {
   const savedGames: SavedGames[] = localStorage.savedGames
     ? JSON.parse(localStorage.savedGames)

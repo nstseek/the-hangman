@@ -1001,6 +1001,9 @@ export const words = [
   'differ'
 ];
 
+/**
+ * Returns a random word from the dictionary
+ */
 export const getRandomWord = (): string => {
   let index = Math.random() * Math.pow(10, 17);
   index = index % words.length;
